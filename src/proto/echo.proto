@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "echo.grpc";
+
+package echo;
+
+service Echo {
+    rpc EchoMessage(EchoRequest) returns (EchoReply) {}
+}
+
+message EchoRequest {
+    string message = 1;
+}
+
+message EchoReply {
+    string message = 1;
+}
